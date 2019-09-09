@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Weather</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        input{
+            width: 50vw;
+            height: 10vw;
+            border-radius: 10px;
+            border: none;
+            border: 2px solid black;
+        }
+        ::placeholder{
+            padding: 10px;
+        }
+        input:hover{
+            width: 70vw;
+        }
+        button{
+            width: 30vw;
+            height: 10vw;
+            margin: 10vw;
+            border: none;
+            border-radius: 10px;
+            background-color: cyan;
+        }
+        body{
+            background-color: rgb(185, 104, 75);
+        }
+        img{
+            height: 30vw;
+        }
+    </style>
+    <body><center>
+        <h1>Weather App</h1>
+        <img src="log.png" ><br>
+        <input type="text" id="id1"placeholder="enter the city name"><br><br>
+        <button onclick="abc()">Get the weather</button>
+    </center>
+    </body>
+    <script>
+        function abc(){
+            var x=document.getElementById("id1").value;
+            window.location.href="https://api.openweathermap.org/data/2.5/weather?q="+x+"&mode=html&appid=27dd1da83bab657daac05a448cec1549"
+        }
+    </script>
+</html>
